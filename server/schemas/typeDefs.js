@@ -27,7 +27,7 @@ const typeDefs = gql`
     _id: ID
     commentTxt: String
     commentAuthor: String
-    createdAt: Date
+    # createdAt: Date
   }
   type Auth {
     token: ID!
@@ -47,8 +47,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addPost(postTxt: String!): Post
     addComment(postId:ID!, commentTxt: String!): Post
-    removePost(postId) ID!
-: Post
+    removePost(postId: ID!): Post
     removeComment(postId: ID!, commentId: ID!): Post  }
 `
 

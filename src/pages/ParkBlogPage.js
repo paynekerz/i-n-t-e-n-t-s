@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import Header from "../components/Header";
-import IoniconsIcon from "react-native-vector-icons/dist/Ionicons";
 import LastPostBox from "../components/LastPostBox";
 
 function ParkBlogPage(props) {
@@ -18,8 +17,8 @@ function ParkBlogPage(props) {
           <TextBg></TextBg>
           <TextInput placeholder="Say somethin..."></TextInput>
         </TextBgStack>
-        <IoniconsIcon
-          name="ios-add-circle-outline"
+        <i
+          className="ios-add-circle-outline"
           style={{
             color: "rgba(113,129,97,1)",
             fontSize: 60,
@@ -27,7 +26,7 @@ function ParkBlogPage(props) {
             marginLeft: 163,
             flex: "0 0 auto"
           }}
-        ></IoniconsIcon>
+        ></i>
         <LastPostBox
           style={{
             height: 83,

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import Header from "../components/Header";
 import LastPostBox from "../components/LastPostBox";
-import EntypoIcon from "react-native-vector-icons/dist/Entypo";
 
 function ParkInfoPage(props) {
   return (
@@ -15,7 +14,7 @@ function ParkInfoPage(props) {
       ></Header>
       <ScrollArea>
         <ParkName>PARK NAME</ParkName>
-        <Image src={require("../assets/images/a7wZjOw_700bwp1.jpg")}></Image>
+        <Image src={require("../assets/images/a7wZjOw_700bwp.jpg")}></Image>
         <LastPostBox
           style={{
             height: 83,
@@ -26,29 +25,29 @@ function ParkInfoPage(props) {
           }}
         ></LastPostBox>
         <PrevArrowRow>
-          <EntypoIcon
-            name="chevron-small-left"
+          <i
+            className="chevron-small-left"
             style={{
               color: "rgba(113,129,97,1)",
               fontSize: 60
             }}
-          ></EntypoIcon>
-          <EntypoIcon
-            name="add-to-list"
+          ></i>
+          <i
+            className="add-to-list"
             style={{
               color: "rgba(113,129,97,1)",
               fontSize: 60,
               marginLeft: 80
             }}
-          ></EntypoIcon>
-          <EntypoIcon
-            name="chevron-small-right"
+          ></i>
+          <i
+            className="chevron-small-right"
             style={{
               color: "rgba(113,129,97,1)",
               fontSize: 60,
               marginLeft: 80
             }}
-          ></EntypoIcon>
+          ></i>
         </PrevArrowRow>
         <ParkInfoHere>PARK INFO HERE</ParkInfoHere>
       </ScrollArea>

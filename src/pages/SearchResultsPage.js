@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
-import ParksPageScroll from "../components/ParksPageScroll";
+import ParksPageScroll from "../components/SearchResultsPageScroll";
 import Header from "../components/Header";
 import ParkCard from "../components/ParkCard"
 
-function ParksPage(props) {
+function SearchResultsPage(props) {
   return (
     <Container>
 
@@ -47,4 +47,4 @@ const Container = styled.div`
   // width: 100vw;
 `;
 
-export default ParksPage;
+export default SearchResultsPage;

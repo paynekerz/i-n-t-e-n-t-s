@@ -10,10 +10,10 @@ const resolvers = {
     user: async (parent, { email }) => {
       return User.findOne({ email }).populate("posts");
     },
-    posts: async (parent, { email }) => {
-      const params = email ? { email } : {};
-      return Thought.find(params).sort({ createdAt: -1 });
-    },
+    // posts: async (parent, { email }) => {
+    //   const params = email ? { email } : {};
+    //   return Thought.find(params).sort({ createdAt: -1 });
+    // },
     post: async (parent, { postId }) => {
       return Post.findOne({ _id: postId });
     },

@@ -1,15 +1,14 @@
 import React, { Component, useState } from "react";
 import styled, { css } from "styled-components";
 
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../utils/mutations";
 
-import Auth from '../utils/auth';
-
+import Auth from "../utils/auth";
 
 function LoginPage(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
@@ -25,7 +24,7 @@ function LoginPage(props) {
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
+    console.log("LOGINPAGE FORMSTATE>>>>", formState);
     try {
       const { data } = await login({
         variables: { ...formState },
@@ -38,71 +37,58 @@ function LoginPage(props) {
 
     // clear form values
     setFormState({
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     });
   };
 
-  
   return (
-    
-
     <Wrapper>
-    <Container>
-    <div className="card-body">
-            {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
-
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
-    </Container>
+      <Container>
+        {data ? (
+          <p>
+            Success! You may now head <Link to="/">back to the homepage.</Link>
+          </p>
+        ) : (
+          <form
+            onSubmit={
+              (event)=>{handleFormSubmit(event)}
+            }>
+            <input
+              className="form-input"
+              placeholder="Your email"
+              name="email"
+              type="email"
+              value={formState.email}
+              onChange={handleChange}
+            />
+            <input
+              className="form-input"
+              placeholder="******"
+              name="password"
+              type="password"
+              value={formState.password}
+              onChange={handleChange}
+            />
+            <button type="submit">Submit</button>
+          </form>
+        )}
+        {error && (
+          <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
+        )}
+      </Container>
     </Wrapper>
   );
 }
 
-
-const Wrapper = styled.div``
+const Wrapper = styled.div``;
 
 const Container = styled.div`
   display: flex;
   position: absolute;
-  top:500px;
-  margin:;
-  background-color: rgba(49,65,49,1);
+  top: 500px;
+  margin: ;
+  background-color: rgba(49, 65, 49, 1);
   flex-direction: column;
   height: 100vh;
   width: 100%;
