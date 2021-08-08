@@ -1,6 +1,7 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { User, Post } = require("../models");
-const { signToken } = require("../utils/auth");
+const  auth  = require("../utils/auth");
+const jwt = require ('jsonwebtoken')
 
 const resolvers = {
   Query: {
@@ -27,11 +28,11 @@ const resolvers = {
   Mutation: {
     addUser: async (parent, { email, password }) => {
       const user = await User.create({ email, password });
-      const token = signToken(user);
+      const token = auth.signToken(user);
       return { token, user };
     },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+    login: async (_, {email, password}) => {
+      const user = await User.findOne({ where: {email} });
 
       if (!user) {
         throw new AuthenticationError("No user found with this email address");
@@ -43,9 +44,10 @@ const resolvers = {
         throw new AuthenticationError("Incorrect credentials");
       }
 
-      const token = signToken(user);
-
-      return { token, user };
+      return jwt.sign(
+        { id: user.id, email: user.email},
+        auth.signToken
+      )
     },
     addPost: async (parent, { postTxt }, context) => {
       if (context.user) {
