@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
-// import MaterialMapView from "../components/MaterialMapView";
-// import Login from "../components/Login";
-import UserNameInput from "../components/UserNameInput";
-import PasswordInput from "../components/PasswordInput";
 
 
 function LoginPage(props) {
@@ -11,22 +7,7 @@ function LoginPage(props) {
     <Wrapper>
     <Container {...props}>
 
-      <UserNameInput
-        style={{
-          width: 199,
-          height: 70,
-          marginTop: -223,
-          marginLeft: 38
-        }}
-      ></UserNameInput>
 
-      <PasswordInput
-        style={{
-          width: 199,
-          height: 70,
-          marginLeft: 38
-        }}
-      ></PasswordInput>
 
       <button>LOGIN</button>
       <button>SIGNUP</button>
@@ -35,10 +16,8 @@ function LoginPage(props) {
   );
 }
 
-const Wrapper = styled.div`
 
-`
-
+const Wrapper = styled.div``
 
 const Container = styled.div`
   display: flex;
