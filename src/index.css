@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "saira-stencil-one-regular";
+  src: url("https://fonts.google.com/specimen/Saira+Stencil+One?query=saira+st#standard-styles") format("truetype");
+}
+
+*{
+  font-family: "saira-stencil-one-regular";
+  /* font-weight: lighter; */
+  
+}
+
+
+
+body {
+  font-family: "saira-stencil-one-regular";
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html{
+  
+  font-family: "saira-stencil-one-regular";
+  background-color: rgba(49,65,49,1);
+  background: radial-gradient(ellipse at center, )
+}
+
+#h-in{
+  font-weight:;
+  font-family: "saira-stencil-one-regular";
+  font-family: courier;
+  color: #E0A100;
+  font-size: 48px;
+  bottom:0;
+}
+
+#h-tents{
+  font-family: "saira-stencil-one-regular";
+  /* font-family: courier; */
+  font-weight: lighter;
+  color: #E0A100;
+
+  color:#202020
+}
