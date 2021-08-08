@@ -43,5 +43,14 @@
   "main": "config-overrides.js",
   "devDependencies": {},
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZacharyWK/i-n-t-e-n-t-s.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ZacharyWK/i-n-t-e-n-t-s/issues"
+  },
+  "homepage": "https://github.com/ZacharyWK/i-n-t-e-n-t-s#readme"
 }
