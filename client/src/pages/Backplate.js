@@ -12,6 +12,7 @@ import Auth from "../utils/auth";
 import Header from "../components/Header";
 import Home from "./Home";
 import Search from "./Search";
+import Blogs from "./Blogs";
 import SingleThought from "./SingleThought";
 import Footer from "../components/Footer";
 
@@ -54,9 +55,9 @@ function Backplate() {
 
                 <Route exact path="/"><Home /></Route>
 
-
                 <Route exact path="/search"><Search /></Route>
-
+                
+                <Route exact path="/blog"><Blogs /></Route>
 
                 <Route exact path="/thoughts/:thoughtId"><SingleThought /></Route>
                     
