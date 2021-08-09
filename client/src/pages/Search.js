@@ -9,13 +9,13 @@ const stateCodes = [
     'VT','VI','VA','WA','WV','WI','WY'
    ];
 
-   for (var i = 0; i <stateCodes.length; i++){
-   let code = stateCodes[i]
-   let element = document.createElement("option")
-   element.textContent = code;
-   element.value = code;
-   select.appendChild(element)
-}
+//    for (var i = 0; i <stateCodes.length; i++){
+//    let code = stateCodes[i]
+//    let element = document.createElement("option")
+//    element.textContent = code;
+//    element.value = code;
+//    select.appendChild(element)
+// }
 
 const Search = () => {
   return (

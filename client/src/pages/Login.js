@@ -70,21 +70,21 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                  className=""
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
                   Login
                 </button>
 
-                <Link className="btn btn-block btn-primary" to="/signup">
+                <Link className="" to="/signup">
                 Signup
               </Link>
               </form>
             )}
 
             {error && (
-              <div className="my-3 p-3 bg-danger text-white">
+              <div className="">
                 {error.message}
               </div>
             )}
