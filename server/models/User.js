@@ -25,6 +25,12 @@ const userSchema = new Schema({
       ref: 'Thought',
     },
   ],
+  blogPosts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'BlogPost',
+    },
+  ],
 });
 
 userSchema.pre('save', async function (next) {
