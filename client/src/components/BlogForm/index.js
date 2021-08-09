@@ -7,7 +7,7 @@ import { QUERY_THOUGHTS } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
 
-const ThoughtForm = () => {
+const BlogForm = () => {
   const [thoughtText, setThoughtText] = useState('');
 
   const [characterCount, setCharacterCount] = useState(0);
@@ -103,4 +103,5 @@ const ThoughtForm = () => {
   );
 };
 
-export default ThoughtForm;
+
+export default BlogForm;

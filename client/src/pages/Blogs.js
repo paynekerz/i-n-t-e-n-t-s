@@ -25,7 +25,7 @@ const Blogs = () => {
           ) : (
             <ThoughtList
               thoughts={thoughts}
-              title="ALL are potato..."
+              title="My Blog..."
             />
           )}
         </div>
