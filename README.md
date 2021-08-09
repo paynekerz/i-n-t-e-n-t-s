@@ -30,7 +30,7 @@ TO DO
 * wants
 
 
-* * * SEARCH PAGE * * *  << started to rebuild pre-rebuild mutations resolvers and typedefs, no errs from them at the  moment
+* * * SEARCH PAGE * * *  << started to remake mutations resolvers and typedefs for Park and BlogPost, no errs from them at the  moment
 
     * UI LETS USER INPUT INFORMATIO AND MAKE A SEARCH << PRIORITY !!!
 
