@@ -16,15 +16,20 @@ DONE
 TO DO
 ---
 
-
-* HOME PAGE WORKS
-
-    * [Z] HOME REDIRECTS TO LOGIN IF NOT LOGGED IN
-
-    * SEARCH NAVBAR LINK
+* NEEDS 
+* wants
 
 
-* [Z] HEADER LINKS HAVE BASIC LINK FUNCTION
+* [Z] HEADER LINKS NAVBAR LINKS WORK
+
+    > [Z&J] SIGNOUT NAVBAR LINK
+    
+    * SEARCH PAGE NAVBAR LINK
+    
+    * USER BLOG NAVBAR LINK
+
+    * HOME NAVBAR LINK REFAC
+
 
 * SEARCH PAGE WORKS
 
@@ -32,29 +37,46 @@ TO DO
 
     > [J] SEARCH TO API WORKS
 
-    * SEARCH PAGE DISPLAY API RESULTS
+    * SEARCH PAGE DISPLAYS API RESULTS ON A CARD FOR EACH PARK WITH THE THE FOLLOWING INFO: 
+        NAME, LON, LAT, ADDRESS, IMAGE -PARK ID WILL ALSO NEED TO BE CAPTURED FOR BLOG CREATION / POST ASSOCIATION
+    
+    * INFO CARD LINKS TO UNIQUE INFO PAGE 
+    
+    * INFO PAGE LINKS TO BLOG FOR SELECTED PARK AND DISPLAYS ANY EXISTING POSTS ASSOCIATED WITH THE PARK
+         * most recent post on parks blog also appears on INFO PAGE
+
+    * USER CAN CREATE A POST ON THE PARKS BLOG PAGE THAT WILL ONLY APPEAR ON THAT PAGE 
+        * all users post appear in their profile page also
 
 
-* INFO PAGE OPENS AFTER USER CLICKS
-    * add most recent post to rsp on INFO PAGE
+* HOME PAGE WORKS
 
-* SERVER REFAC
+    > [Z] HOME REDIRECTS TO LOGIN IF NOT LOGGED IN
 
-USER CAN OPEN BLOG PAGE FROM INFO PAGE AND MAKE A POST REUSE THOUGHTS AS FULL BLOG PAGE FOR A PARK - REFACTOR TO REPOPULATE PER PARK
-
-
-ADJUST CSS
+    * USERS MOST RECENT POST AND INFO FROM ASSOCIATED PARK WITH LINK TO ITS BLOG PAGE
 
 
-FINAL README
+
+* ADJUST CSS
+
+* PRESENTATION
+
+* FINAL README
 
 
-PRESENTATION
 
+* server refactor
 
--user profile page, user can delete their account, veiw their name, veiw posts and parks the they are linked to, make posts without a park association, friend list, favorite parks, trail name and trail name voting
+* user profile page
+    * user can delete their account
+    * view posts and parks the they are linked to
+    * make posts without a park association
+    * friend list, favorite parks
+    * trail name and trail name voting
 
--look into how to use images from a url (like when posing a link in discord)
+* thoughts refactor to blog
+
+* posts can display images from a URL -like posts on discord or fb
 
 
 
