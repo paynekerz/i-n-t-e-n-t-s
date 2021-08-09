@@ -12,15 +12,15 @@ DONE
 
 > [Z] HOME REDIRECTS TO LOGIN
 
+> [Z] SIGNUP PAGE WORKING
+
+> [Z&J] LOGIN PAGE WORKING
+
 ---
 TO DO
 ---
 
-[Z&J] LOGIN PAGE WORKING
-
-[Z] SIGNUP PAGE WORKING
-
-[Z] WHEN LOGGED IN USER IS TAKEN TO HOME PAGE INSTEAD OF LOGGIN PAGE
+[Z] WHEN LOGGED IN USER IS TAKEN TO HOME PAGE INSTEAD OF LOGIN PAGE
 
 [Z] HEADER LINKS HAVE BASIC LINK FUNCTION
 
@@ -55,3 +55,29 @@ PRESENTATION
 -look into how to use images from a url (like when posing a link in discord)
 
 
+
+
+
+# inTents
+
+## Description
+
+Am online blog to track and post about national parks across the United States. 
+
+## User Story
+
+```
+AS A USER
+I WANT to search for a national park
+SO THAT I can save that park to my account
+I WANT to create a blog post for a park
+SO THAT I can review that particular park
+```
+
+## Wireframe
+
+![Screenshot of Wireframe](Assets/intents-wireframe.PNG)
+
+## API
+
+National Park Service API [Link](https://www.nps.gov/subjects/developer/api-documentation.htm)

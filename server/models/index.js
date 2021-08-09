@@ -1,6 +1,4 @@
 const User = require('./User');
-const Park = require('./Park');
-const Post = require('./Post')
+const Thought = require('./Thought');
 
-
-module.exports = { User, Park, Post };
+module.exports = { User, Thought };

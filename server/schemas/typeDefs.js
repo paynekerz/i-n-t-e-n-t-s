@@ -3,52 +3,51 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   type User {
     _id: ID
+    username: String
     email: String
     password: String
-    post: [Post]!
+    thoughts: [Thought]!
   }
 
-  type Park {
+  type Thought {
     _id: ID
-    fullName: String
-    parkCode: String
-    state: String
-    post: [Post]!
-  }
-
-  type Post {
-    _id: ID
-    postTxt: String
-    postAuthor: String
-    created: String
+    thoughtText: String
+    thoughtAuthor: String
+    createdAt: String
     comments: [Comment]!
   }
+
   type Comment {
     _id: ID
-    commentTxt: String
+    commentText: String
     commentAuthor: String
-    # createdAt: Date
+    createdAt: String
   }
+
   type Auth {
     token: ID!
     user: User
   }
 
-  type Query{
+  type Query {
     users: [User]
-    user(email: String!): User
-    post(email: String): [Post]
-    Post(postId: ID!): Post
-    me: User
+    user(username: String!): User
+    thoughts(username: String): [Thought]
+    thought(thoughtId: ID!): Thought
   }
 
-  type Mutation{
-    addUser(email: String!, password: String!): Auth
+  type Mutation {
+    addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addPost(postTxt: String!): Post
-    addComment(postId:ID!, commentTxt: String!): Post
-    removePost(postId: ID!): Post
-    removeComment(postId: ID!, commentId: ID!): Post  }
-`
+    addThought(thoughtText: String!, thoughtAuthor: String!): Thought
+    addComment(
+      thoughtId: ID!
+      commentText: String!
+      commentAuthor: String!
+    ): Thought
+    removeThought(thoughtId: ID!): Thought
+    removeComment(thoughtId: ID!, commentId: ID!): Thought
+  }
+`;
 
 module.exports = typeDefs;
