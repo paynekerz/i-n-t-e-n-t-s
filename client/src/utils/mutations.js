@@ -12,13 +12,28 @@ export const LOGIN_USER = gql`
   }
 `;
 
+export const ADD_PARK = gql`
+  mutation addPark($fullName:String!,$parkCode:String!,$state:String!){
+    addPark(fullName:$fullName,parkCode:$parkCode,state:$state){
+      _id
+      fullName
+      parkCode
+      state
+      blogPosts {
+        _id
+        commentText
+      }
+    }
+  }
+`
+
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
     addUser(username: $username, email: $email, password: $password) {
       token
       user {
         _id
-        username
+        blogPostText
       }
     }
   }
