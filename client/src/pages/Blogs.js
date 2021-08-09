@@ -6,7 +6,7 @@ import ThoughtForm from '../components/ThoughtForm';
 
 import { QUERY_THOUGHTS } from '../utils/queries';
 
-const Search = () => {
+const Blogs = () => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);
   const thoughts = data?.thoughts || [];
 
@@ -34,4 +34,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default Blogs;

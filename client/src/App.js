@@ -6,15 +6,20 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch,
+} from "react-router-dom";
 import Auth from "./utils/auth";
 
 import Backplate from "./pages/Backplate";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
-// import SingleThought from "./pages/SingleThought";
-// import Header from "./components/Header";
-// import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Search from "./pages/Search";
+import Blogs from "./pages/Blogs";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -40,23 +45,42 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-
 function App() {
   return (
     <ApolloProvider client={client}>
-
       <Router>
         <div>
-        <Route 
-          path="/login"
-          render={() => (Auth.loggedIn() ? <Redirect to="/"/> : <Login/>)}/>
-        <Route
-          path="/"
-          render={() => (Auth.loggedIn() ? <Backplate/> : <Redirect to="/login" />)}/>
-        <Route path="/signup"><Signup/></Route>
+
+          <Route
+            path="/login"
+            render={() => (Auth.loggedIn() ? <Redirect to="/" /> : <Login />)}
+          />
+
+          <Route
+            path="/"
+            render={() =>
+              Auth.loggedIn() ? <Backplate /> : <Redirect to="/login" />
+            }
+          />
+
+          <Route path="/signup">
+            <Signup />
+          </Route>
+
+          <Switch>
+            <Route path="/search">
+              <Search />
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/blog/:userName">
+              <Blogs />
+            </Route>
+          </Switch>
+
         </div>
       </Router>
-        
     </ApolloProvider>
   );
 }
