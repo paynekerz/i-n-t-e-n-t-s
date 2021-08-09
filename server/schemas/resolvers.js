@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Thought } = require('../models');
+const { User, Thought, BlogPost, Park } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -16,6 +16,25 @@ const resolvers = {
     },
     thought: async (parent, { thoughtId }) => {
       return Thought.findOne({ _id: thoughtId });
+    },
+    users: async () => {
+      return User.find().populate('blogPosts');
+    },
+    user: async (parent, { username }) => {
+      return User.findOne({ username }).populate('blogPosts');
+    },
+    blogPosts: async (parent, { username }) => {
+      const params = username ? { username } : {};
+      return BlogPost.find(params).sort({ createdAt: -1 });
+    },
+    blogPost: async (parent, { blogPostId }) => {
+      return BlogPost.findOne({ _id: blogPostId });
+    },
+    me: async (parent, args, context) => {
+      if (context.user) {
+        return User.findOne({ _id: context.user._id }).populate('blogPosts');
+      }
+      throw new AuthenticationError('You are not logged in!');
     },
   },
 
@@ -42,6 +61,47 @@ const resolvers = {
 
       return { token, user };
     },
+
+    addBlogPost: async (parent, { blogPostTxt }, context) => {
+      if (context.user) {
+        const blogPost = await Blog.create({
+          blogPostTxt,
+          blogPostAuthor: context.user.email,
+        });
+  
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { blogPosts: blogPost._id } }
+        );
+  
+        return blogPost;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    addBlogComment: async (parent, { blogPostId, commentText, commentAuthor }) => {
+      return Thought.findOneAndUpdate(
+        { _id: blogPostId },
+        {
+          $addToSet: { comments: { commentText, commentAuthor } },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    },
+    removeBlogPost: async (parent, { blogPostId }) => {
+      return BlogPost.findOneAndDelete({ _id: blogPostId });
+    },
+    removeBlogComment: async (parent, { blogPostId, commentId }) => {
+      return BlogPost.findOneAndUpdate(
+        { _id: blogPostId },
+        { $pull: { comments: { _id: commentId } } },
+        { new: true }
+      );
+    },
+
+
     addThought: async (parent, { thoughtText, thoughtAuthor }) => {
       const thought = await Thought.create({ thoughtText, thoughtAuthor });
 

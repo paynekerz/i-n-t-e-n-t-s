@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_THOUGHT } from '../../utils/mutations';
-import { QUERY_THOUGHTS } from '../../utils/queries';
+import { ADD_BLOGPOST } from '../../utils/mutations';
+import { QUERY_BLOGPOSTS } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
 
@@ -12,13 +12,13 @@ const BlogForm = () => {
 
   const [characterCount, setCharacterCount] = useState(0);
 
-  const [addThought, { error }] = useMutation(ADD_THOUGHT, {
+  const [addThought, { error }] = useMutation(ADD_BLOGPOST, {
     update(cache, { data: { addThought } }) {
       try {
-        const { thoughts } = cache.readQuery({ query: QUERY_THOUGHTS });
+        const { thoughts } = cache.readQuery({ query: QUERY_BLOGPOSTS });
 
         cache.writeQuery({
-          query: QUERY_THOUGHTS,
+          query: QUERY_BLOGPOSTS,
           data: { thoughts: [addThought, ...thoughts] },
         });
       } catch (e) {
@@ -102,6 +102,5 @@ const BlogForm = () => {
     </div>
   );
 };
-
 
 export default BlogForm;

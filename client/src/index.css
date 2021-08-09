@@ -63,31 +63,10 @@ pre {
   /* 2 */
 }
 
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
 a {
   background-color: transparent;
 }
 
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
 b,
 strong {
   font-weight: bolder;
@@ -402,6 +381,9 @@ p {
   font-size: 1.1rem;
   margin: 0 0 1rem;
   line-height: 1.5;
+  display: flex;
+  flex-wrap: wrap;
+  color:red;
 }
 
 ul,
@@ -1149,13 +1131,8 @@ form .form-input {
   background-color: #ffffff;
   margin: 0.625rem 0;
   font-size: 1.2rem;
-  border: 1px solid #484848;
-  border-radius: 0.3rem;
 }
 
-form .form-input.form-input-squared {
-  border-radius: 0;
-}
 
 form [type='checkbox'],
 form [type='radio'] {

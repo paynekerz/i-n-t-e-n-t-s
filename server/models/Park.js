@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const blogSchema = require('./Blog')
+const blogPostSchema = require('./BlogPost')
 
 const parkSchema = new Schema(
     {
@@ -18,10 +18,10 @@ const parkSchema = new Schema(
             type: String,
             required: true,
         },
-        posts: [
+        blogPosts: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'Blog'
+                ref: 'BlogPost'
             },
         ], 
     }

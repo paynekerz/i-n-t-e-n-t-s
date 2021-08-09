@@ -12,24 +12,39 @@ export const LOGIN_USER = gql`
   }
 `;
 
+export const ADD_PARK = gql`
+  mutation addPark($fullName:String!,$parkCode:String!,$state:String!){
+    addPark(fullName:$fullName,parkCode:$parkCode,state:$state){
+      _id
+      fullName
+      parkCode
+      state
+      blogPosts {
+        _id
+        commentText
+      }
+    }
+  }
+`
+
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
     addUser(username: $username, email: $email, password: $password) {
       token
       user {
         _id
-        username
+        blogPostText
       }
     }
   }
 `;
 
 export const ADD_BLOGPOST = gql`
-  mutation addThought($thoughtText: String!, $thoughtAuthor: String!) {
-    addThought(thoughtText: $thoughtText, thoughtAuthor: $thoughtAuthor) {
+  mutation addBlogPost($blogText: String!, $blogAuthor: String!) {
+    addBlogPost(blogPostText: $blogPostText, blogPostAuthor: $blogPostAuthor) {
       _id
-      thoughtText
-      thoughtAuthor
+      blogPostText
+      blogPostAuthor
       createdAt
       comments {
         _id
@@ -40,19 +55,19 @@ export const ADD_BLOGPOST = gql`
 `;
 
 export const ADD_BLOGCOMMENT = gql`
-  mutation addComment(
-    $thoughtId: ID!
+  mutation addBlogComment(
+    $blogPostId: ID!
     $commentText: String!
     $commentAuthor: String!
   ) {
     addComment(
-      thoughtId: $thoughtId
+      blogPostId: $blogPostId
       commentText: $commentText
       commentAuthor: $commentAuthor
     ) {
       _id
-      thoughtText
-      thoughtAuthor
+      blogPostText
+      blogPostAuthor
       createdAt
       comments {
         _id
