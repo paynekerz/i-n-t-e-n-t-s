@@ -1,4 +1,5 @@
 import React from "react";
+import styled, { css } from "styled-components";
 import {
   ApolloClient,
   InMemoryCache,
@@ -45,14 +46,11 @@ const client = new ApolloClient({
 function Backplate() {
     return (
       <ApolloProvider client={client}>
-        <Router>
-          
-          <div className="flex-column justify-flex-start min-100-vh">
-            <Header />
-
-
-            <div className="container">
-
+      <Router>
+        <div className="flex-column justify-flex-start min-100-vh">
+          <Header />
+          <div className="container">
+            <Container>
                 <Route exact path="/"><Home /></Route>
 
                 <Route exact path="/search"><Search /></Route>
@@ -60,15 +58,24 @@ function Backplate() {
                 <Route exact path="/blog"><Blogs /></Route>
 
                 <Route exact path="/thoughts/:thoughtId"><SingleThought /></Route>
-                    
-
-            </div>
-            <Footer />
-          </div> 
-         
-                </Router>
+            </Container>
+          </div>
+          <Footer />
+        </div>
+      </Router>
     </ApolloProvider>
   );
 }
+
+
+const Container = styled.div`
+position: "fixed";
+background-color:#718161;
+`
+
+const Backing = styled.div`
+color:#718161;
+background-color: rgba(49,65,49,1);
+`
 
 export default Backplate;

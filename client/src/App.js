@@ -1,4 +1,5 @@
 import React from "react";
+import styled, { css } from "styled-components";
 import {
   ApolloClient,
   InMemoryCache,
@@ -84,5 +85,8 @@ function App() {
     </ApolloProvider>
   );
 }
+
+
+
 
 export default App;
