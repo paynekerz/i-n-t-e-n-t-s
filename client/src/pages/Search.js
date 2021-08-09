@@ -1,37 +1,31 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
 
-import ThoughtList from '../components/ThoughtList';
-import ThoughtForm from '../components/ThoughtForm';
+let select = document.getElementById("stateCodes")
+const stateCodes = [
+    'AL','AK','AS','AZ','AR','CA','CO','CT','DE','DC','FM','FL','GA',
+    'GU','HI','ID','IL','IN','IA','KS','KY','LA','ME','MH','MD','MA',
+    'MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND',
+    'MP','OH','OK','OR','PW','PA','PR','RI','SC','SD','TN','TX','UT',
+    'VT','VI','VA','WA','WV','WI','WY'
+   ];
 
-import { QUERY_THOUGHTS } from '../utils/queries';
+   for (var i = 0; i <stateCodes.length; i++){
+   let code = stateCodes[i]
+   let element = document.createElement("option")
+   element.textContent = code;
+   element.value = code;
+   select.appendChild(element)
+}
 
 const Search = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
-  const thoughts = data?.thoughts || [];
-
   return (
-    <main>
-      <div className="flex-row justify-center">
-        <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
-        >
-          <ThoughtForm />
-        </div>
-        <div className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <ThoughtList
-              thoughts={thoughts}
-              title="Find a park..."
-            />
-          )}
-        </div>
-      </div>
-    </main>
-  );
+    <div>
+         <p>What state is the park in?</p>
+            <select id="stateCodes">    
+            </select>
+          <button id="stateSearch">Search</button>
+    </div>
+  )
 };
 
 export default Search;
