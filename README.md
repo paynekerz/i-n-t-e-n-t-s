@@ -71,7 +71,7 @@ TO DO
 * [R&Z] ADJUST CSS
 
     * USE COLORS 
-        #718161 #202020 #E0A100 #314131
+        lightgreen #718161, darkgreen #314131, grey #202020, yellow #E0A100
         
     * USE FONT
         https://fonts.google.com/specimen/Saira+Stencil+One
