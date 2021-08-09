@@ -14,13 +14,13 @@ DONE
 
 > [Z] HEADER LINKS NAVBAR LINKS WORK
     
-    > [Z&J] SIGNOUT NAVBAR LINK
+   > [Z&J] SIGNOUT NAVBAR LINK
     
-    > [Z] SEARCH PAGE NAVBAR LINK
+   > [Z] SEARCH PAGE NAVBAR LINK
     
-    > [Z] USER BLOG NAVBAR LINK
+   > [Z] USER BLOG NAVBAR LINK
 
-    > [Z] HOME NAVBAR LINK REFAC
+   > [Z] HOME NAVBAR LINK REFAC
 
 ---
 TO DO
@@ -30,10 +30,9 @@ TO DO
 * wants
 
 
+* * * SEARCH PAGE * * *  << started to rebuild pre-rebuild mutations resolvers and typedefs, no errs from them at the  moment
 
-* SEARCH PAGE WORKS
-
-    * USER INPUTS USED TO SEND SEARCH
+    * UI LETS USER INPUT INFORMATIO AND MAKE A SEARCH << PRIORITY !!!
 
     > [J] SEARCH TO API WORKS
 
@@ -49,21 +48,29 @@ TO DO
         * all users post appear in their profile page also
 
 
-* HOME PAGE WORKS
+* HOME PAGE
 
     > [Z] HOME REDIRECTS TO LOGIN IF NOT LOGGED IN
 
-    * USERS MOST RECENT POST AND INFO FROM ASSOCIATED PARK WITH LINK TO ITS BLOG PAGE
-
+    * SPLASH IMAGE OR PLACEHOLDERS FOR AFFILIATE MARKETING
 
 
 * ADJUST CSS
+
+    * USE COLORS 
+        #718161 #202020 #E0A100 #314131
+        
+    * USE FONT
+        https://fonts.google.com/specimen/Saira+Stencil+One
+
+
 
 * PRESENTATION
 
 * FINAL README
 
 
+* [Z] troubleshoot heroku
 
 * server refactor
 
@@ -77,8 +84,6 @@ TO DO
 * thoughts refactor to blog
 
 * posts can display images from a URL -like posts on discord or fb
-
-
 
 
 
