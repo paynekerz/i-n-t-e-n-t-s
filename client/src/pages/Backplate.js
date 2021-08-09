@@ -49,31 +49,17 @@ function Backplate() {
           <div className="flex-column justify-flex-start min-100-vh">
             <Header />
 
-                {/* LINKS TO HOME SEARCH AND BLOG */}
 
             <div className="container">
 
                 <Route exact path="/"><Home /></Route>
 
-                    {/* 
-                    LAST PARK USER POSTED ON
-                    ALSO SHOWS USERS MOST RECENTLY COMMENTED ON POST 
-                    */}
 
                 <Route exact path="/search"><Search /></Route>
 
-                    {/* 
-                    SEARCH SELECTIONS FOR PARK 
-                    AND DISPLAYS RESULTS (NAME LON LAT ADDRESS DISTANCE) RESULTS WILL DYNAMICALLY LINK TO A UNIQUE INFO PAGE 
-                    INFO PAGE WILL LINK TO A UNIQUE BLOG FOR THE SELECTED PARK
-                    ANY BLOG POSTS ASSOCIATED WITH THAT PARK WILL BE DISPLAYED AS WELL AS A WINDOW THE USER CAN WRITE IN
-                    */}
 
                 <Route exact path="/thoughts/:thoughtId"><SingleThought /></Route>
                     
-                    {/* 
-                    SHOWS ALL USERS POSTS - NEED TO REFACTOR TO BE CALLED BLOG 
-                    */}
 
             </div>
             <Footer />
