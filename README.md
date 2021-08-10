@@ -28,7 +28,13 @@ DONE
 
    > [Z] HOME NAVBAR LINK REFAC
 
+   * [P] UI LETS USER INPUT INFORMATIO AND MAKE A SEARCH << PRIORITY !!!
 
+   * [J&P&Z] SEARCH TO API
+
+   * [Z] INFO PAGE LINKS TO BLOG FOR SELECTED PARK 
+
+   * [J] db/server refactor
 
 ---
 TO DO
@@ -43,20 +49,12 @@ TO DO
 
 *** SEARCH PAGE ***  << started to remake mutations resolvers and typedefs for Park and BlogPost, no errs from them at the  moment
 
-   * [P] UI LETS USER INPUT INFORMATIO AND MAKE A SEARCH << PRIORITY !!!
-
-   * [J&P&Z] SEARCH TO API
-
-   * SEARCH PAGE DISPLAYS API RESULTS ON A CARD FOR EACH PARK WITH THE THE FOLLOWING INFO: 
-        NAME, LON, LAT, ADDRESS, IMAGE -PARK ID WILL ALSO NEED TO BE CAPTURED FOR BLOG CREATION / POST ASSOCIATION
+    *** 1 USER CAN MAKE POST ON THE BLOG AND INFO PAGE AND WILL ONLY SEE IT ON THAT PARKS PAGE
     
-   * INFO CARD LINKS TO UNIQUE INFO PAGE 
+    2 PARK BLOG AND INFO PAGE WILL SHOW ALL POSTS ASSOCIATED WITH PARK
     
-   * INFO PAGE LINKS TO BLOG FOR SELECTED PARK AND DISPLAYS ANY EXISTING POSTS ASSOCIATED WITH THE PARK
-         * most recent post on parks blog also appears on INFO PAGE
+    3 SEARCH PAGE DISPLAYS NAME, LON, LAT, ADDRESS, IMAGE 
 
-   * USER CAN CREATE A POST ON THE PARKS BLOG PAGE THAT WILL ONLY APPEAR ON THAT PAGE 
-        * all users post appear in their profile page also
 
 add park id to mutuion typdefs model resolvers for blog post save 
 
@@ -90,7 +88,9 @@ query by park id
 
 * [Z] troubleshoot heroku
 
-* server refactor
+
+
+* all users post appear in their profile page also
 
 * user profile page
     * user can delete their account
@@ -102,6 +102,7 @@ query by park id
 * thoughts refactor to blog
 
 * posts can display images from a URL -like posts on discord or fb
+
 
 
 

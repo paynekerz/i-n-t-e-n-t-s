@@ -19,7 +19,7 @@ const Blogs = ({park,setShowBlog}) => {
         >{park.name}
         <button onClick={()=>setShowBlog(false)}>back</button>
 
-
+{/* router /id then pull param from url */}
           <ThoughtForm />
         </div>
         <div className="col-12 col-md-8 mb-3">
@@ -31,6 +31,7 @@ const Blogs = ({park,setShowBlog}) => {
               title="My Blog..."
             />
           )}
+
         </div>
       </div>
     </main>

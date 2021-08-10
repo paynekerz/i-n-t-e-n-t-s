@@ -1,0 +1,7 @@
+.featureImage {
+    height: 600px;
+    width: 600px;
+    animation: fade 3s infinite;
+  }
+
+/* https://stackoverflow.com/questions/55509418/react-css-transition-css-for-fade-in-and-out-when-background-image-is-changed */

@@ -14,13 +14,15 @@ import {
   Switch,
 } from "react-router-dom";
 import Auth from "./utils/auth";
-
+// import Background from  "./components/Background"
 import Backplate from "./pages/Backplate";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
-import Home from "./pages/Home";
-import Search from "./pages/Search";
-import Blogs from "./pages/Blogs";
+// import Home from "./pages/Home";
+// import Search from "./pages/Search";
+// import Blogs from "./pages/Blogs";
+
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -49,6 +51,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      {/* <Background/> */}
       <Router>
         <div>
 

@@ -1,0 +1,122 @@
+#stateSearch {}
+
+
+.searchInput{
+
+
+    display: flex;
+    justify-content: center;
+    margin:25px;
+}
+
+button{
+  transition: 0.6s ease;
+
+    -webkit-appearance: none;
+
+    font-size: 1.25rem;
+    width:150px;
+    font-family: 'Saira Stencil One';
+    background-color: #202020;
+    border: solid #1b1b1b 3.5px;
+    /* border-radius: 10px; */
+    text-align: center;
+    text-align-last: center;
+    -moz-text-align-last: center;
+    font-weight: bolder;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-shadow:.10em .10em .70em .1em  black;
+
+}
+
+button:hover{
+  transition: 0.6s ease;
+
+    color: #E0A100;
+}
+
+button:active{
+  transition: 0.6s ease;
+
+    color: #314131;
+
+    background-color: #d1a126;
+    border: solid #E0A100 3.5px;
+    box-shadow:.10em .10em .70em .1em  #E0A100;
+
+}
+  
+
+select{
+  transition: 0.6s ease;
+    
+    max-width: 150px;
+    margin-right: 20px;
+    color: #718161;
+    background-color: #202020;
+    border: solid #1b1b1b 3.5px;
+    /* border-radius: 10px; */
+    text-align: center;
+    text-align-last: center;
+    -moz-text-align-last: center;
+    font-family: "Courier New";
+    font-weight: bolder;
+    box-shadow:.20em .15em .950em .1em  black;
+
+}
+
+@media screen and (min-width:0\0) {
+    select {
+        background-image:none\9;
+        padding: 5px\9;
+    }
+}
+
+
+.parkCard {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+
+
+.singleCard {
+    min-width: 350px;
+    max-width: 350px;
+    flex-shrink: 0;
+    mask-image:inherit;
+    background-color: #718161;
+    box-shadow: .5em .5em 1em black;
+    border-radius: 5px;
+    border: solid #687759 3.5px;
+}
+
+.singleCard:hover{
+    background-color: #202020;
+    border: solid #1b1b1b 3.5px;
+}
+
+.parkImg{
+    width: 100%;
+    height: auto;
+    /* object-fit: contain; */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5px;
+}
+
+
+.cardTitle {
+    display: flex;
+    justify-content: center;
+    padding: 5px
+}
+
+.info {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}

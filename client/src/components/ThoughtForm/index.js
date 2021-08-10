@@ -54,8 +54,8 @@ const ThoughtForm = () => {
   };
 
   return (
-    <div>
-      <h3>What's on your techy mind?</h3>
+    <div className="blogPost">
+      <h3>What did you think of the park?</h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -83,7 +83,7 @@ const ThoughtForm = () => {
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Thought
+                SAY
               </button>
             </div>
             {error && (
@@ -95,7 +95,7 @@ const ThoughtForm = () => {
         </>
       ) : (
         <p>
-          You need to be logged in to share your thoughts. Please{' '}
+          You need to be logged in!{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
