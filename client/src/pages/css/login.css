@@ -1,11 +1,11 @@
-.header{
+/* .header{
     background-color: ;
     
-    }
-    .header:hover{
+    } */
+    /* .header:hover{
         mask-image: linear-gradient(rgb(209, 103, 103), transparent);
     
-    }
+    } */
     
     b{
         font-family: 'Saira Stencil One';
@@ -32,9 +32,9 @@
         
     }
     
-    .title::{
+    /* .title::{
         text-shadow: #FC0 1px 0 10px;
-    }
+    } */
     
     .bar {
         /* position: absolute; */
