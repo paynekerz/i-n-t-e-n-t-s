@@ -14,7 +14,7 @@ import {
   Switch,
 } from "react-router-dom";
 import Auth from "./utils/auth";
-
+import Background from  "./components/Background"
 import Backplate from "./pages/Backplate";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
@@ -51,6 +51,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      <Background/>
       <Router>
         <div>
 

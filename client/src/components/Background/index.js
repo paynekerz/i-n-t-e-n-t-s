@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
+import "./style.css";
 
 const heroImage = [
 "./img/damian-markutt-Dhmn6ete6g8-unsplash.jpg", 
 "./img/denys-nevozhai-63Znf38gnXk-unsplash.jpg",
 "./img/levi-jones-ZHfmZ7Sk-0s-unsplash.jpg",
-""
 ];
 
 export default function Background() {
