@@ -14,7 +14,7 @@ const Search = () => {
 
   const findParks = async () => {
     const response = await axios.get(`/api/parks/${selection}`);
-    console.log(response.data);
+    console.log("<<<<LOG FOR REF>>>>> ",response.data.data);
     setResults(response.data.data);
   };
 
@@ -93,9 +93,11 @@ const Search = () => {
 
       {results
         ? results.map((park) => (
-            <div>
+            <div className="parkCard">
+
               <p key={park.id}>{park.name}</p>
               <button onClick={()=>openParkBlog(park.id)}>GO TO BLOG</button>
+
             </div>
           ))
         : null}

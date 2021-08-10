@@ -31,6 +31,7 @@ const Blogs = ({park,setShowBlog}) => {
               title="My Blog..."
             />
           )}
+
         </div>
       </div>
     </main>
