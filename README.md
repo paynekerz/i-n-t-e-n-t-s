@@ -45,7 +45,7 @@ TO DO
 
    * [P] UI LETS USER INPUT INFORMATIO AND MAKE A SEARCH << PRIORITY !!!
 
-   * [J&P] SEARCH TO API
+   * [J&P&Z] SEARCH TO API
 
    * SEARCH PAGE DISPLAYS API RESULTS ON A CARD FOR EACH PARK WITH THE THE FOLLOWING INFO: 
         NAME, LON, LAT, ADDRESS, IMAGE -PARK ID WILL ALSO NEED TO BE CAPTURED FOR BLOG CREATION / POST ASSOCIATION
@@ -58,7 +58,9 @@ TO DO
    * USER CAN CREATE A POST ON THE PARKS BLOG PAGE THAT WILL ONLY APPEAR ON THAT PAGE 
         * all users post appear in their profile page also
 
+add park id to mutuion typdefs model resolvers for blog post save 
 
+query by park id 
 
 * HOME PAGE
 

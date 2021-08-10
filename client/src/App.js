@@ -68,17 +68,7 @@ function App() {
             <Signup />
           </Route>
 
-          <Switch>
-            <Route path="/search">
-              <Search />
-            </Route>
-            <Route path="/home">
-              <Home />
-            </Route>
-            <Route path="/blog/:userName">
-              <Blogs />
-            </Route>
-          </Switch>
+
 
         </div>
       </Router>

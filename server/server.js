@@ -3,6 +3,8 @@ const { ApolloServer } = require('apollo-server-express');
 const routes = require('./controllers');
 const path = require('path');
 
+const getAllParks = require('./utils/npsApi')
+
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
@@ -22,6 +24,12 @@ app.use(express.json());
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
+
+//API GET ROUTE
+app.get("/api/parks/:stateCode",async (req,res)=>{
+  const response = await getAllParks(req.params.stateCode)
+  res.json(response.data)
+})
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
