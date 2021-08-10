@@ -19,6 +19,12 @@ const blogPostSchema = new Schema({
     default: Date.now,
     get: (timestamp) => dateFormat(timestamp),
   },
+  parkCode: {
+    type: String,
+    required: true,
+    unique: true,
+    minlength: 1
+  },
   comments: [
     {
       commentText: {

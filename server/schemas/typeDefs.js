@@ -23,6 +23,7 @@ const typeDefs = gql`
     postTxt: String
     postAuthor: String
     created: String
+    # parkCode: String
     comments: [Comment]!
   }
 
@@ -62,7 +63,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     
-    addBlogPost(blogPostText: String!, blogPostAuthor: String!): BlogPost
+    addBlogPost(parkCode: String!, blogPostText: String!, blogPostAuthor: String!): BlogPost
     addBlogComment(
       thoughtId: ID!
       commentText: String!
