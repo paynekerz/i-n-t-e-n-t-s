@@ -18,8 +18,8 @@ const ThoughtList = ({ thoughts, title }) => {
                 had this thought on {thought.createdAt}
               </span>
             </h4>
-            <div className="card-body bg-light p-2">
-              <p>{thought.thoughtText}</p>
+            <div  className="card-body bg-light p-2">
+              <p style={{ flexShrink: 1, flexWrap: 'wrap'}}>{thought.thoughtText}</p>
             </div>
             <Link
               className="btn btn-primary btn-block btn-squared"
@@ -34,3 +34,5 @@ const ThoughtList = ({ thoughts, title }) => {
 };
 
 export default ThoughtList;
+
+

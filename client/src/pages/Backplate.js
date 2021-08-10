@@ -70,7 +70,7 @@ function Backplate() {
 
 const Container = styled.div`
 position: "fixed";
-background-color:#718161;
+background-color:#314131;
 `
 
 const Backing = styled.div`

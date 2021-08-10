@@ -3,3 +3,10 @@ font-family: 'Saira Stencil One', cursive;
 src: url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap') 
 format("truetype");
 }
+
+
+.Test{
+  display: flexbox;
+  justify-content: center;
+  align-content: center;
+}
