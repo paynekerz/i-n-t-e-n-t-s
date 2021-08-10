@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box
+  /* box-sizing: border-box */
 }
 
 body {
@@ -7,11 +7,6 @@ margin:0;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
 
 html{
 background-color: #314131;
@@ -53,7 +48,6 @@ img {vertical-align: middle;}
 a:hover{
   color: #E0A100;
   text-shadow:#E0A100;
-
   }
 
 a {
@@ -67,15 +61,11 @@ a {
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
+  text-align: center
   /* user-select: none; */
 }
 
-b{
-  font-family: 'Saira Stencil One';
-  font-weight: lighter;
-  color:#202020;
-  transition: 0.6s ease;
-}
+
 
 .text {
   color: #fff;

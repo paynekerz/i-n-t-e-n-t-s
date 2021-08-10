@@ -9,4 +9,7 @@ format("truetype");
   display: flexbox;
   justify-content: center;
   align-content: center;
+  background-image: ;
+  mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
+
 }

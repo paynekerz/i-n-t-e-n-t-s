@@ -43,7 +43,7 @@ const Login = (props) => {
   return (
     <main>
       <div>
-        <div>
+
           <h4>Login</h4>
           <div>
             {data ? (
@@ -89,8 +89,10 @@ const Login = (props) => {
               </div>
             )}
           </div>
-        </div>
-      </div>
+          <h1 className="title">
+            in<b>TENTS</b>
+          </h1>
+          </div>
     </main>
   );
 };

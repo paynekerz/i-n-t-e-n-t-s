@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Blogs from  "./Blogs"
 import axios from "axios";
+import "./css/search.css"
+import styled, { css } from "styled-components";
+
 
 const Search = () => {
   const [selection,setSelection] = useState();
@@ -35,6 +38,7 @@ const Search = () => {
     <div>
       <p>What state is the park in?</p>
       <select onChange={(e)=>handleChange(e)}>
+        <option>Choose State</option>
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
         <option value="AZ">Arizona</option>
@@ -93,16 +97,23 @@ const Search = () => {
 
       {results
         ? results.map((park) => (
-            <div className="parkCard">
+        <div className="parkCard">
+          <a class = "singleCard" onClick={()=>openParkBlog(park.id)}>
+            <div class = "cardTitle" key={park.id}>{park.name}</div>
+            <img class = "parkImg" src={park.images[0].url} height = "200"/>
+            <ul class ="info">
+              <li>Address: {park.addresses[0].line1} {park.addresses[0].city} {park.addresses[0].stateCode} {park.addresses[0].postalCode}</li>
+              <br/>
+              <li>Latititude: {park.latitude}</li>
+              <li>Longitude: {park.longitude}</li>
+            </ul> 
+          </a>
+        </div>)):null}
 
-              <p key={park.id}>{park.name}</p>
-              <button onClick={()=>openParkBlog(park.id)}>GO TO BLOG</button>
-
-            </div>
-          ))
-        : null}
     </div>
   );
 };
+
+
 
 export default Search;

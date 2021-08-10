@@ -67,8 +67,8 @@ const resolvers = {
         const blogPost = await Blog.create({
           blogPostTxt,
           blogPostAuthor: context.user.email,
-          // blogPostAuthor: context.user.username,
-          // parkCode,
+          blogPostAuthor: context.user.username,
+          parkCode,
         });
   
         await User.findOneAndUpdate(
