@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-
+import "./css/login.css"
 import Auth from '../utils/auth';
 
 
@@ -43,11 +43,12 @@ const Login = (props) => {
   };
 
   return (
-    <main>
-      <div>
-
-          <h4>Login</h4>
-          <div>
+    <main classname="logWrap">
+      <div >
+      <h1 className="title">
+            in<b>TENTS</b>
+          </h1>
+          <div className="logInput">
             {data ? (
               <p>
                 Success! You may now head{' '}
@@ -57,7 +58,7 @@ const Login = (props) => {
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="LOGIN EMAIL"
                   name="email"
                   type="email"
                   value={formState.email}
@@ -65,7 +66,7 @@ const Login = (props) => {
                 />
                 <input
                   className="form-input"
-                  placeholder="******"
+                  placeholder="***password***"
                   name="password"
                   type="password"
                   value={formState.password}
@@ -91,9 +92,7 @@ const Login = (props) => {
               </div>
             )}
           </div>
-          <h1 className="title">
-            in<b>TENTS</b>
-          </h1>
+
           </div>
     </main>
   );
