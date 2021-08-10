@@ -23,8 +23,8 @@ const Header = () => {
             </h1>
           </Link>
         </div>
-        <div>
-          <Link className=" btn-lg m-2" to="/search">
+
+          <div style={{display:"flex",alignItems:"center"}}><Link className=" btn-lg m-2" to="/search">
            find<b>-PARK</b>
           </Link>
           <Link className=" btn-lg m-2" to="/blog">
@@ -32,8 +32,8 @@ const Header = () => {
           </Link>
           <Link className=" btn-lg m-2" onClick={logout}>
             log<b>-OUT</b>
-          </Link>
-        </div>
+          </Link></div>
+
       </NavBar>
     </header>
   );
@@ -46,7 +46,7 @@ font-size: 4rem;
 color:#E0A100;
 `;
 const NavBar = styled.div`
-  display:flexbox;
+  display:flex;
   justify-content: center;
   align-content: center;
 

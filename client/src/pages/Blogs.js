@@ -6,7 +6,7 @@ import ThoughtForm from '../components/ThoughtForm';
 
 import { QUERY_THOUGHTS } from '../utils/queries';
 
-const Blogs = () => {
+const Blogs = ({park,setShowBlog}) => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);
   const thoughts = data?.thoughts || [];
 
@@ -15,8 +15,11 @@ const Blogs = () => {
       <div className="flex-row justify-center">
         <div
           className="col-12 col-md-10 mb-3 p-3"
-          style={{  }}
-        >
+          // style={{  }}
+        >{park.name}
+        <button onClick={()=>setShowBlog(false)}>back</button>
+
+
           <ThoughtForm />
         </div>
         <div className="col-12 col-md-8 mb-3">

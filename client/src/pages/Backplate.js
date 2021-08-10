@@ -53,11 +53,23 @@ function Backplate() {
             <Container>
                 <Route exact path="/"><Home /></Route>
 
-                <Route exact path="/search"><Search /></Route>
-                
-                <Route exact path="/blog"><Blogs /></Route>
+                <Switch>
+            <Route path="/search">
+              <Search />
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/blog/:userName">
+              <Blogs />
+            </Route>
+          </Switch>
 
-                <Route exact path="/thoughts/:thoughtId"><SingleThought /></Route>
+                {/* <Route exact path="/search"><Search /></Route> */}
+                
+                {/* <Route exact path="/blog"><Blogs /></Route>
+
+                <Route exact path="/thoughts/:thoughtId"><SingleThought /></Route> */}
             </Container>
           </div>
           <Footer />
