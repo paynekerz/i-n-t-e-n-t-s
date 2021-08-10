@@ -8,6 +8,7 @@ margin:0;
 -moz-osx-font-smoothing: grayscale;
 }
 
+
 html{
 background-color: #314131;
 font-family: "Courier New";
@@ -18,7 +19,7 @@ margin:0;
 
 
 .sc-gtsrHT{
-background-color: #718161;
+/* background-color: #718161; */
 box-shadow:-1em 2.5px 1em black;
 
 }

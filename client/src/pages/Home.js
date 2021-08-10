@@ -1,41 +1,15 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
-import "./css/login.css"
 
-
-import ThoughtList from '../components/ThoughtList';
-import ThoughtForm from '../components/ThoughtForm';
-
-import { QUERY_THOUGHTS } from '../utils/queries';
+// import "./css/login.css"
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
-  const thoughts = data?.thoughts || [];
 
   return (
-    
-      <div className="flex-row justify-center">
-        
-        
-
-        {/* <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
-        >
-          <ThoughtForm />
-        </div>
-        <div className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <ThoughtList
-              thoughts={thoughts}
-              title="ALL are potato..."
-            />
-          )}
-        </div> */}
-      </div>
-    
+    <div className="mission">
+      <p>After being sequestered in their homes for over a year. People have begun searching for new ways to enjoy their time outdoors. 
+        Which presented us with a question: If you wanted to visit one of our nations many national parks, how would you gauge the overall experience of other visitors?</p>
+      <p>With inTents we aim to to remedy this problem by providing users with a community of nature enthusiasts that provide reviews of the various national parks across the country.</p>
+    </div>
   );
 };
 
