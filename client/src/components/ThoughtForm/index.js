@@ -75,7 +75,6 @@ const ThoughtForm = () => {
                 name="thoughtText"
                 placeholder="Here's a new thought..."
                 value={thoughtText}
-                className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>

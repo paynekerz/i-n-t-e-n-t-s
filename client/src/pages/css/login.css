@@ -1,16 +1,26 @@
-.logWrap{
+.logWrap, .signUpCard{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.logInput{
+h4{
+    font-size: 2rem;
+}
+
+.logInput  div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
     top: -50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .logWrap div {
@@ -27,6 +37,7 @@
         font-weight: lighter;
         color:#718161;
         transition: 0.6s ease;
+        text-shadow: 1px 1px 2px #202020, 0 0 .5em #202020, 0 0 0.2em #202020;
       }
     
     .navItem,.logOut{
@@ -35,14 +46,11 @@
         font-size: 1.5rem;
     }
 
-    .form-input{
-    font-family: 'Saira Stencil One';
-    background-color: #202020;
 
-    }
 
     input{
         min-height: 40px;
+        padding-top: 20px;
 
         transition: 0.6s ease;
     
@@ -50,7 +58,6 @@
         margin-right: 20px;
         color: #718161;
         border: solid #1b1b1b 3.5px;
-        /* border-radius: 10px; */
         text-align: center;
         text-align-last: center;
         -moz-text-align-last: center;
@@ -65,6 +72,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        text-shadow: 1px 1px 2px #202020, 0 0 .5em #202020, 0 0 0.2em #202020;
     }
     
     .title:hover{
@@ -74,9 +82,17 @@
         
     }
     
-    /* .title::{
-        text-shadow: #FC0 1px 0 10px;
-    } */
+    .loginForm{
+        text-align: center;
+    }
+    
+    .signUpButton{
+        width: 150px;
+        height:43px;
+        font-size: 1.5rem;
+
+
+    }
     
     .bar {
         /* position: absolute; */

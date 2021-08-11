@@ -2,19 +2,8 @@
   box-sizing: border-box
 }
 
-.bgPlaceHolder {
-  display: flex;
-  position: relative;
-
-  background-image: url("./components/Background/img/denys-nevozhai-63Znf38gnXk-unsplash.jpg");
-  /* background-image:
-  linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),
-  url("./components/Background/img/denys-nevozhai-63Znf38gnXk-unsplash.jpg"); */
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.wrapper{
+  padding-top: 150px;
 }
 
 .blogPost{
@@ -33,24 +22,19 @@ margin:0;
 
 
 html{
-background-color: #314131;
-font-family: "Courier New";
-margin:0;
--webkit-font-smoothing: antialiased;
+
+background: url("./components/Background/img/emily-hon-dQwijI66_Jw-unsplash.jpg") no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
 -moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+font-family: "Courier New";
 }
 
-
-.sc-gtsrHT{
-/* background-color: #718161; */
-box-shadow:-1em 2.5px 1em black;
-
-}
-
-
-.mySlides {display: none}
 img {vertical-align: middle;}
-
 
 .fade {
   -webkit-animation-name: fade;
@@ -59,63 +43,19 @@ img {vertical-align: middle;}
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
 a:hover{
   color: #E0A100;
   text-shadow:#E0A100;
-  }
-
+}
 a {
   text-decoration: none;
   color:#202020;
   cursor: pointer;
-  /* position: absolute; */
-  /* top: 50%; */
-  /* width: auto; */
-  padding: 16px;
+  margin: 5px;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   text-align: center
-  /* user-select: none; */
 }
 
-
-
-.text {
-  color: #fff;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.dot:hover,.dot:active {
-  background-color: #bbb;
-}
-
-.slideshow-container{
-  display: flex;
-  border-width: 1px;
-  border-color: #ccc;
-  background-color: rgba(0, 0, 0, 0.9);
-  overflow: hidden;
-  flex-direction: column;
-  border-style: solid;
-  position: absolute;
-  box-shadow: 3px 3px 30px 1px #000;
-  left: 193px;
-  right: 193px;
-  margin: auto;
-}

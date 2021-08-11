@@ -96,8 +96,8 @@ const Search = () => {
         </button>
       </div>
 
-      {results
-        ? results.map((park) => (
+      {
+      results ? results.map((park) => (
             <div className="parkCard">
               <a class="singleCard" onClick={() => openParkBlog(park.id)}>
                 <div class="cardTitle" key={park.id}>
@@ -115,8 +115,10 @@ const Search = () => {
                 </ul>
               </a>
             </div>
-          ))
-        : null}
+
+      )) : null
+      }
+
     </main>
   );
 };

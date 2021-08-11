@@ -55,7 +55,8 @@ const Login = (props) => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={handleFormSubmit} className="loginForm">
+                <div>
                 <input
                   className="form-input"
                   placeholder="LOGIN EMAIL"
@@ -79,10 +80,8 @@ const Login = (props) => {
                 >
                   Login
                 </button>
-
-                <Link className="" to="/signup">
-                Signup
-              </Link>
+                </div>
+                <Link className="signUpButton" to="/signup">Signup</Link>
               </form>
             )}
 
