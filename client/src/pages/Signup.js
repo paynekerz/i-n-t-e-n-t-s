@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import "./css/login.css"
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
@@ -39,11 +39,16 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
+    <main>
+              <Link to="/login">
+          <h1 className="title">
+            in<b>TENTS</b>
+          </h1>
+        </Link>
+      <div>
+        <div className="signUpCard">
+          <h4>Sign Up</h4>
+          <div>
             {data ? (
               <p>
                 Success! You may now head{' '}
@@ -53,7 +58,7 @@ const Signup = () => {
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
-                  placeholder="Your username"
+                  placeholder="enter a username"
                   name="username"
                   type="text"
                   value={formState.username}
@@ -61,7 +66,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="enter an  email"
                   name="email"
                   type="email"
                   value={formState.email}
@@ -69,7 +74,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="******"
+                  placeholder="enter password"
                   name="password"
                   type="password"
                   value={formState.password}
@@ -86,7 +91,7 @@ const Signup = () => {
             )}
 
             {error && (
-              <div className="my-3 p-3 bg-danger text-white">
+              <div>
                 {error.message}
               </div>
             )}
