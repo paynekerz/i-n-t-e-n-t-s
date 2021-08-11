@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-
+import "./style.css"
 import { ADD_COMMENT } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
@@ -40,8 +40,8 @@ const CommentForm = ({ thoughtId }) => {
   };
 
   return (
-    <div>
-      <h4>What you doing?</h4>
+    <div className="card">
+      <h3>What you doing?</h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -68,9 +68,9 @@ const CommentForm = ({ thoughtId }) => {
               ></textarea>
             </div>
 
-            <div className="col-12 col-lg-3">
+            <div className="postButton">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Comment
+                <h4><b>POST</b>it</h4>
               </button>
             </div>
           </form>

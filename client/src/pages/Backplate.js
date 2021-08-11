@@ -45,35 +45,25 @@ const client = new ApolloClient({
 
 function Backplate() {
     return (
-      <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
           <Header />
-          <div className="container">
-            <Container>
+            <div className="container">
+
+
                 <Route exact path="/"><Home /></Route>
 
                 <Switch>
-            <Route path="/search">
-              <Search />
-            </Route>
-            <Route path="/home">
-              <Home />
-            </Route>
-            <Route path="/blog">
-              <SingleThought />
-            </Route>
-          </Switch>
 
-                {/* <Route exact path="/search"><Search /></Route> */}
-                
-                {/* <Route exact path="/blog"><Blogs /></Route>
+                  <Route path="/search"><Search /></Route>
 
-                <Route exact path="/thoughts/:thoughtId"><SingleThought /></Route> */}
-            </Container>
+                  <Route path="/home"><Home /></Route>
+
+                  <Route path="/blog"><SingleThought /></Route>
+
+                </Switch>
           </div>
-          <Footer />
-        </div>
+        <Footer />
       </Router>
     </ApolloProvider>
   );
@@ -81,13 +71,13 @@ function Backplate() {
 
 
 const Container = styled.div`
-position: "fixed";
-background-color:#314131;
+// position: "fixed";
+// background-color:#314131;
 `
 
 const Backing = styled.div`
-color:#718161;
-background-color: rgba(49,65,49,1);
+// color:#718161;
+// background-color: rgba(49,65,49,1);
 `
 
 export default Backplate;

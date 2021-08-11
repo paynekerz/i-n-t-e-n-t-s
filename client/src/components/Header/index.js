@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header>
 
-      <div >
+      <div className="headWrapper">
         <Link to="/">
           <h1 className="title">
             in<b>TENTS</b>
@@ -22,13 +22,13 @@ const Header = () => {
         </Link>
       </div>
 
-      <div >
+      <div className="barWrap">
         <div className="bar">
           <Link className="navItem" to="/search">
             find<b>PARK</b>
           </Link>
           <Link className="navItem" to="/blog">
-            my<b>PROFILE</b>
+            my<b>BLOG</b>
           </Link>
           <Link className="logOut" onClick={logout}>
             log<b>OUT</b>
@@ -39,17 +39,5 @@ const Header = () => {
     </header>
   );
 };
-
-const Title = styled.div`
-
-  transition: 0.6s ease;
-  font-size: 4rem;
-
-`;
-const NavBar = styled.div`
-  // display:flex;
-  // justify-content: center;
-  align-content: center;
-`;
 
 export default Header;
