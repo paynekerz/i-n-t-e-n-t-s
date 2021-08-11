@@ -1,131 +1,84 @@
-HEROKU >>> https://i-n-t-e-n-t-s.herokuapp.com/
+# inTENTX
 
-FIRST REPO >>> https://github.com/rcuevas17/InTents
+![License](https://img.shields.io/badge/License-GNU-blue.svg)
 
----
-DONE
----
-
-> [Z] DEPLOY TO HEROKU
-
-
-
-> [Z&J] SIGNUP PAGE WORKING
+ ## Table of Contents.
+ * [Overview](#overview)
+ * [Design](#overview)
+ * [Criteria](#given-criteria)
+ * [Questions](#have-questions)
+ * [Links](#links)
+ ---
 
 
+## Overview 
 
-> [Z&J] LOGIN PAGE WORKING
+create a MERN stack single-page application that works with real-world data to solve a real-world challenge, with a focus on data and user demand. 
 
-
-
-> [Z] HEADER LINKS NAVBAR LINKS WORK
-    
-   > [Z&J] SIGNOUT NAVBAR LINK
-    
-   > [Z] SEARCH PAGE NAVBAR LINK
-    
-   > [Z] USER BLOG NAVBAR LINK
-
-   > [Z] HOME NAVBAR LINK REFAC
-
-   * [P] UI LETS USER INPUT INFORMATIO AND MAKE A SEARCH << PRIORITY !!!
-
-   * [J&P&Z] SEARCH TO API
-
-   * [Z] INFO PAGE LINKS TO BLOG FOR SELECTED PARK 
-
-   * [J] db/server refactor
-
----
-TO DO
----
-
-
-
-* NEEDS 
-* wants
-
-
-
-*** SEARCH PAGE ***  << started to remake mutations resolvers and typedefs for Park and BlogPost, no errs from them at the  moment
-
-    *** 1 USER CAN MAKE POST ON THE BLOG AND INFO PAGE AND WILL ONLY SEE IT ON THAT PARKS PAGE
-    
-    2 PARK BLOG AND INFO PAGE WILL SHOW ALL POSTS ASSOCIATED WITH PARK
-    
-    3 SEARCH PAGE DISPLAYS NAME, LON, LAT, ADDRESS, IMAGE 
-
-
-add park id to mutuion typdefs model resolvers for blog post save 
-
-query by park id 
-
-* HOME PAGE
-
-    > [Z] HOME REDIRECTS TO LOGIN IF NOT LOGGED IN
-
-    * SPLASH IMAGE OR PLACEHOLDERS FOR AFFILIATE MARKETING
-
-
-
-* [R&Z] ADJUST CSS
-
-    * USE COLORS 
-        lightgreen #718161, darkgreen #314131, grey #202020, yellow #E0A100
-        
-    * USE FONT
-        https://fonts.google.com/specimen/Saira+Stencil+One
-
-
-
-* PRESENTATION
-
-
-
-* FINAL README
-
-
-
-* [Z] troubleshoot heroku
-
-
-
-* all users post appear in their profile page also
-
-* user profile page
-    * user can delete their account
-    * view posts and parks the they are linked to
-    * make posts without a park association
-    * friend list, favorite parks
-    * trail name and trail name voting
-
-* thoughts refactor to blog
-
-* posts can display images from a URL -like posts on discord or fb
-
-
-
-
-# inTents
-
-## Description
-
-Am online blog to track and post about national parks across the United States. 
-
-## User Story
-
-```
 AS A USER
 I WANT to search for a national park
 SO THAT I can save that park to my account
 I WANT to create a blog post for a park
 SO THAT I can review that particular park
+
+
+## Design
+![image](./image1.png)
+
+
+
+---
+## Given Criteria
+* Use React for the front end.
+
+* Use GraphQL with a Node.js and Express.js server.
+
+* Use MongoDB and the Mongoose ODM for the database.
+
+* Use queries and mutations for retrieving, adding, updating, and deleting data.
+
+* Be deployed using Heroku (with data).
+
+* Have a polished UI.
+
+* Be responsive.
+
+* Be interactive (i.e., accept and respond to user input).
+
+* Include authentication (JWT).
+
+* Protect sensitive API key information on the server.
+
+* Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, etc.).
+
+* Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+
+
+
+
+---
+## Have Questions
+### You can contact us at:
+
+ <https://github.com/ZacharyWK>
+ 
+ <https://github.com/Adaspeaks>
+ 
+ <https://github.com/rcuevas17>
+ 
+ <https://github.com/paynekerz>
+
+
+
+
+---
+## Links
+[https://github.com/ZacharyWK/i-n-t-e-n-t-s](https://github.com/ZacharyWK/i-n-t-e-n-t-s)
+```
+https://github.com/ZacharyWK/20210729-react-portfolio-zk
 ```
 
-## Wireframe
-
-![Screenshot of Wireframe](Assets/intents-wireframe.PNG)
-
-## API
-
-National Park Service API [Link](https://www.nps.gov/subjects/developer/api-documentation.htm)
+[DEPLOYED](https://i-n-t-e-n-t-s.herokuapp.com/)
+```
+https://i-n-t-e-n-t-s.herokuapp.com/
+```
