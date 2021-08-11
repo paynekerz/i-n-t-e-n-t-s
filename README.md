@@ -1,4 +1,4 @@
-# inTENTX
+# inTENTS
 
 ![License](https://img.shields.io/badge/License-GNU-blue.svg)
 
