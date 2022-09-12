@@ -25,10 +25,10 @@ const Header = () => {
       <div className="barWrap">
         <div className="bar">
           <Link className="navItem" to="/search">
-            find<b>PARK</b>
+            view<b>PARKS</b>
           </Link>
           <Link className="navItem" to="/blog">
-            my<b>BLOG</b>
+            base<b>CAMP</b>
           </Link>
           <Link className="logOut" onClick={logout}>
             log<b>OUT</b>
